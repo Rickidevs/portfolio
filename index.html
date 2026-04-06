@@ -17,27 +17,6 @@
     <meta property="og:url" content="https://elvinlatifli.com">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://elvinlatifli.com">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Space Grotesk', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        base: '#050505',
-                        surface: '#111111',
-                        border: '#222222',
-                        textMain: '#EDEDED',
-                        textMuted: '#888888',
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
         html, body {
             overflow-x: hidden !important;
@@ -73,20 +52,22 @@
         }
 
         @keyframes sound-wave {
-            0% { height: 4px; }
-            50% { height: 16px; }
-            100% { height: 4px; }
+            0%, 100% { height: 4px; }
+            25% { height: 18px; }
+            50% { height: 6px; }
+            75% { height: 14px; }
         }
         .playing-wave span {
             display: inline-block;
             width: 3px;
             background-color: #EDEDED;
             border-radius: 999px;
-            animation: sound-wave 1.2s infinite ease-in-out;
+            transition: all 0.2s ease;
         }
-        .playing-wave span:nth-child(2) { animation-delay: 0.2s; }
-        .playing-wave span:nth-child(3) { animation-delay: 0.4s; }
-        .playing-wave span:nth-child(4) { animation-delay: 0.6s; }
+        .playing-wave span:nth-child(1) { animation: sound-wave 1.3s infinite ease-in-out; }
+        .playing-wave span:nth-child(2) { animation: sound-wave 1.6s infinite ease-in-out -0.4s; }
+        .playing-wave span:nth-child(3) { animation: sound-wave 1.1s infinite ease-in-out -0.8s; }
+        .playing-wave span:nth-child(4) { animation: sound-wave 1.4s infinite ease-in-out -0.2s; }
     </style>
     <script type="application/ld+json">
     {
@@ -157,8 +138,8 @@
         
         <header class="w-full border-b border-border bg-base/80 backdrop-blur-md sticky top-0 z-50">
             <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-                <div class="font-mono text-sm tracking-wider font-bold">
-                    ELVIN L. <span class="text-textMuted animate-pulse">_</span>
+                <div class="font-mono text-sm tracking-wider font-bold group cursor-default">
+                    ELVIN L. <span class="text-textMuted group-hover:animate-none animate-pulse">_</span>
                 </div>
                 <div class="flex space-x-4">
                     <a href="https://github.com/rickidevs" target="_blank" class="text-textMuted hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
@@ -174,58 +155,25 @@
 
                 <section class="space-y-4 sm:space-y-6">
                     <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-textMain leading-tight">
-                        Cybersecurity Researcher. <br>
-                        <span class="text-textMuted">Vulnerability Hunter.</span>
+                        Elvin Latifli<br>
+                        <span class="text-textMuted">Cybersecurity Researcher</span>
                     </h1>
-                    <p class="text-textMuted text-base sm:text-lg max-w-2xl leading-relaxed">
-                        I specialize in discovering critical vulnerabilities, securing complex architectures, and conducting high-level penetration tests. From government infrastructures to open-source software, I break things to make them unbreakable.
-                    </p>
                 </section>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-                    
-                    <div class="bento-card p-6 sm:p-8 md:col-span-2 flex flex-col justify-between space-y-6">
-                        <div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm font-mono">Penetration Testing</span>
-                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm font-mono">OSINT</span>
-                                <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm font-mono">Full Stack Development</span>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex flex-wrap items-center gap-4 sm:gap-5 text-sm sm:text-base">
-                                <i class="fa-brands fa-python text-xl sm:text-2xl text-[#3776AB] hover:opacity-80 transition-opacity" title="Python"></i>
-                                <i class="fa-brands fa-js text-xl sm:text-2xl text-[#F7DF1E] hover:opacity-80 transition-opacity" title="JavaScript"></i>
-                                <i class="fa-brands fa-php text-xl sm:text-2xl text-[#777BB4] hover:opacity-80 transition-opacity" title="PHP"></i>
-                                <i class="fa-brands fa-html5 text-xl sm:text-2xl text-[#E34F26] hover:opacity-80 transition-opacity" title="HTML5"></i>
-                                <i class="fa-brands fa-css3-alt text-xl sm:text-2xl text-[#1572B6] hover:opacity-80 transition-opacity" title="CSS3"></i>
-                                <i class="fa-brands fa-golang text-xl sm:text-2xl text-[#00ADD8] hover:opacity-80 transition-opacity" title="Go"></i>
-                                <span class="font-bold text-[#A8B9CC] text-lg sm:text-xl hover:opacity-80 transition-opacity cursor-default" title="C">C</span>
-                                <span class="font-bold text-[#00599C] text-lg sm:text-xl hover:opacity-80 transition-opacity cursor-default" title="C++">C++</span>
-                                <i class="fa-brands fa-git-alt text-xl sm:text-2xl text-[#F05032] hover:opacity-80 transition-opacity" title="Git"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bento-card p-6 sm:p-8 flex flex-col justify-center items-center text-center space-y-4">
-                        <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-2">
-                            <i class="fa-solid fa-user-secret text-2xl text-white"></i>
-                        </div>
-                        <h3 class="font-bold text-lg">Let's Connect</h3>
-                        <a href="mailto:elvinlatifli@proton.me" class="inline-block px-5 sm:px-6 py-2 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition-colors text-sm">
-                            elvinlatifli@proton.me
-                        </a>
-                    </div>
 
                     <div class="bento-card p-6 sm:p-8 md:col-span-3">
                         <h2 class="text-sm font-mono text-textMuted uppercase tracking-widest mb-6 border-b border-border pb-2">Notable Discoveries & Achievements</h2>
                         <div class="space-y-6">
                             
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between group gap-2 sm:gap-0">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between group gap-2 sm:gap-0 cursor-crosshair cve-row" data-cvss="9.1">
                                 <div>
                                     <h4 class="font-bold text-white text-base sm:text-lg flex items-center flex-wrap gap-2 sm:gap-3">
                                         OpenClaude Sandbox Bypass 
-                                        <span class="px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded text-xs font-mono mt-1 sm:mt-0">CVE</span>
+                                        <span class="cve-badge inline-flex items-center justify-center overflow-hidden rounded border font-mono text-xs transition-all duration-300 h-6 w-11 bg-red-500/10 text-red-400 border-red-500/20 group-hover:w-24 group-hover:bg-red-500/20 group-hover:border-red-500/50 group-hover:shadow-[0_0_12px_rgba(239,68,68,0.4)]">
+                                            <span class="cve-text transition-opacity duration-200 group-hover:opacity-0 group-hover:absolute">CVE</span>
+                                            <span class="cvss-text opacity-0 absolute transition-opacity duration-200 group-hover:opacity-100 group-hover:relative font-bold tracking-widest drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]"></span>
+                                        </span>
                                     </h4>
                                     <p class="text-textMuted text-xs sm:text-sm mt-1">Discovered critical Sandbox Bypass via Early-Exit Logic Flaw (CVSS 9.1) in OpenClaude.</p>
                                 </div>
@@ -236,11 +184,14 @@
 
                             <div class="w-full h-px bg-border"></div>
 
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between group gap-2 sm:gap-0">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between group gap-2 sm:gap-0 cursor-crosshair cve-row" data-cvss="8.5">
                                 <div>
                                     <h4 class="font-bold text-white text-base sm:text-lg flex items-center flex-wrap gap-2 sm:gap-3">
                                         LangChain Path Traversal 
-                                        <span class="px-2 py-0.5 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 rounded text-xs font-mono mt-1 sm:mt-0">CVE</span>
+                                        <span class="cve-badge inline-flex items-center justify-center overflow-hidden rounded border font-mono text-xs transition-all duration-300 h-6 w-11 bg-cyan-500/10 text-cyan-400 border-cyan-500/20 group-hover:w-24 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/50 group-hover:shadow-[0_0_12px_rgba(6,182,212,0.4)]">
+                                            <span class="cve-text transition-opacity duration-200 group-hover:opacity-0 group-hover:absolute">CVE</span>
+                                            <span class="cvss-text opacity-0 absolute transition-opacity duration-200 group-hover:opacity-100 group-hover:relative font-bold tracking-widest drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]"></span>
+                                        </span>
                                     </h4>
                                     <p class="text-textMuted text-xs sm:text-sm mt-1">Discovered High-severity Path Traversal (CWE-22) in langchain-core framework.</p>
                                 </div>
@@ -251,11 +202,14 @@
 
                             <div class="w-full h-px bg-border"></div>
 
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between group gap-2 sm:gap-0">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between group gap-2 sm:gap-0 cursor-crosshair cve-row" data-cvss="9.3">
                                 <div>
                                     <h4 class="font-bold text-white text-base sm:text-lg flex items-center flex-wrap gap-2 sm:gap-3">
                                         Clawbot AI Zero-Day 
-                                        <span class="px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded text-xs font-mono mt-1 sm:mt-0">CVE</span>
+                                        <span class="cve-badge inline-flex items-center justify-center overflow-hidden rounded border font-mono text-xs transition-all duration-300 h-6 w-11 bg-red-500/10 text-red-400 border-red-500/20 group-hover:w-24 group-hover:bg-red-500/20 group-hover:border-red-500/50 group-hover:shadow-[0_0_12px_rgba(239,68,68,0.4)]">
+                                            <span class="cve-text transition-opacity duration-200 group-hover:opacity-0 group-hover:absolute">CVE</span>
+                                            <span class="cvss-text opacity-0 absolute transition-opacity duration-200 group-hover:opacity-100 group-hover:relative font-bold tracking-widest drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]"></span>
+                                        </span>
                                     </h4>
                                     <p class="text-textMuted text-xs sm:text-sm mt-1">Discovered critical vulnerability (CVSS 9.3) in Clawbot AI framework.</p>
                                 </div>
@@ -266,11 +220,14 @@
 
                             <div class="w-full h-px bg-border"></div>
 
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between group gap-2 sm:gap-0">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between group gap-2 sm:gap-0 cursor-crosshair cve-row" data-cvss="6.5">
                                 <div>
                                     <h4 class="font-bold text-white text-base sm:text-lg flex items-center flex-wrap gap-2 sm:gap-3">
                                         Richie LMS Timing Attack
-                                        <span class="px-2 py-0.5 bg-orange-500/10 text-orange-400 border border-orange-500/20 rounded text-xs font-mono mt-1 sm:mt-0">CVE</span>
+                                        <span class="cve-badge inline-flex items-center justify-center overflow-hidden rounded border font-mono text-xs transition-all duration-300 h-6 w-11 bg-orange-500/10 text-orange-400 border-orange-500/20 group-hover:w-24 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 group-hover:shadow-[0_0_12px_rgba(249,115,22,0.4)]">
+                                            <span class="cve-text transition-opacity duration-200 group-hover:opacity-0 group-hover:absolute">CVE</span>
+                                            <span class="cvss-text opacity-0 absolute transition-opacity duration-200 group-hover:opacity-100 group-hover:relative font-bold tracking-widest drop-shadow-[0_0_8px_rgba(249,115,22,0.8)]"></span>
+                                        </span>
                                     </h4>
                                     <p class="text-textMuted text-xs sm:text-sm mt-1">Identified vulnerability in France Université Numérique (OpenFUN) systems.</p>
                                 </div>
@@ -278,8 +235,6 @@
                                     <a href="https://www.cve.org/CVERecord?id=CVE-2026-26717" target="_blank" class="hover:underline">CVE-2026-26717 <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i></a>
                                 </div>
                             </div>
-
-                            <div class="w-full h-px bg-border"></div>
 
                             <div class="w-full h-px bg-border"></div>
 
@@ -296,51 +251,48 @@
                                 </div>
                             </div>
 
-                            <div class="w-full h-px bg-border"></div
-
                         </div>
                     </div>
                 </div>
 
-                    <div class="bento-card p-6 sm:p-8 md:col-span-3">
-                        <h2 class="text-sm font-mono text-textMuted uppercase tracking-widest mb-6 border-b border-border pb-2">My Tools</h2>
-                        
-                        <div class="grid md:grid-cols-2 gap-5 sm:gap-6">
-                            <div class="p-5 sm:p-6 border border-border rounded-lg bg-white/[0.01] hover:bg-white/[0.03] transition-colors relative overflow-hidden group">
-                                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                                    <i class="fa-solid fa-terminal text-6xl"></i>
-                                </div>
-                                <div class="flex flex-col sm:flex-row justify-between sm:items-start mb-3 relative z-10 gap-3 sm:gap-0">
-                                    <h4 class="font-bold text-white text-xl font-mono">rickshell</h4>
-                                    <span class="self-start px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded text-xs font-mono flex items-center shadow-[0_0_10px_rgba(239,68,68,0.2)]">
-                                        <i class="fa-brands fa-linux mr-1"></i> BlackArch Official
-                                    </span>
-                                </div>
-                                <p class="text-textMuted text-sm mb-5 relative z-10 leading-relaxed">Advanced post-exploitation tool and reverse shell handler. Reviewed, accepted, and merged into the official BlackArch Linux repository.</p>
-                                <a href="https://github.com/rickidevs/rickshell" target="_blank" class="inline-flex items-center text-sm font-mono text-white hover:text-gray-300 transition-colors relative z-10">
-                                    <i class="fa-brands fa-github mr-2 text-lg"></i> View Source
-                                </a>
+                <div class="bento-card p-6 sm:p-8 md:col-span-3">
+                    <h2 class="text-sm font-mono text-textMuted uppercase tracking-widest mb-6 border-b border-border pb-2">My Tools</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-5 sm:gap-6">
+                        <div class="p-5 sm:p-6 border border-border rounded-lg bg-white/[0.01] hover:bg-white/[0.03] transition-colors relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <i class="fa-solid fa-terminal text-6xl"></i>
                             </div>
+                            <div class="flex flex-col sm:flex-row justify-between sm:items-start mb-3 relative z-10 gap-3 sm:gap-0">
+                                <h4 class="font-bold text-white text-xl font-mono">rickshell</h4>
+                                <span class="self-start px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded text-xs font-mono flex items-center shadow-[0_0_10px_rgba(239,68,68,0.2)]">
+                                    <i class="fa-brands fa-linux mr-1"></i> BlackArch Official
+                                </span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-5 relative z-10 leading-relaxed">Advanced post-exploitation tool and reverse shell handler. Reviewed, accepted, and merged into the official BlackArch Linux repository.</p>
+                            <a href="https://github.com/rickidevs/rickshell" target="_blank" class="inline-flex items-center text-sm font-mono text-white hover:text-gray-300 transition-colors relative z-10">
+                                <i class="fa-brands fa-github mr-2 text-lg"></i> View Source
+                            </a>
+                        </div>
 
-                            <div class="p-5 sm:p-6 border border-border rounded-lg bg-white/[0.01] hover:bg-white/[0.03] transition-colors relative overflow-hidden group">
-                                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                                    <i class="fa-solid fa-fish text-6xl"></i>
-                                </div>
-                                <div class="flex flex-col sm:flex-row justify-between sm:items-start mb-3 relative z-10 gap-3 sm:gap-0">
-                                    <h4 class="font-bold text-white text-xl font-mono">rickphis</h4>
-                                    <span class="self-start px-2 py-0.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded text-xs font-mono">
-                                        Community Favorite
-                                    </span>
-                                </div>
-                                <p class="text-textMuted text-sm mb-5 relative z-10 leading-relaxed">Highly effective automated phishing and social engineering toolkit designed for realistic red team engagements and security awareness training.</p>
-                                <a href="https://github.com/rickidevs/rickphis" target="_blank" class="inline-flex items-center text-sm font-mono text-white hover:text-gray-300 transition-colors relative z-10">
-                                    <i class="fa-brands fa-github mr-2 text-lg"></i> View Source
-                                </a>
+                        <div class="p-5 sm:p-6 border border-border rounded-lg bg-white/[0.01] hover:bg-white/[0.03] transition-colors relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <i class="fa-solid fa-fish text-6xl"></i>
                             </div>
+                            <div class="flex flex-col sm:flex-row justify-between sm:items-start mb-3 relative z-10 gap-3 sm:gap-0">
+                                <h4 class="font-bold text-white text-xl font-mono">rickphis</h4>
+                                <span class="self-start px-2 py-0.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded text-xs font-mono">
+                                    Community Favorite
+                                </span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-5 relative z-10 leading-relaxed">Highly effective automated phishing and social engineering toolkit designed for realistic red team engagements and security awareness training.</p>
+                            <a href="https://github.com/rickidevs/rickphis" target="_blank" class="inline-flex items-center text-sm font-mono text-white hover:text-gray-300 transition-colors relative z-10">
+                                <i class="fa-brands fa-github mr-2 text-lg"></i> View Source
+                            </a>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </main>
 
@@ -396,9 +348,7 @@
         }
 
         function toggleMusic() {
-            if (!tooltipDismissed) {
-                dismissTooltip();
-            }
+            if (!tooltipDismissed) dismissTooltip();
 
             if (isPlaying) {
                 music.pause();
@@ -415,6 +365,65 @@
             }
             isPlaying = !isPlaying;
         }
+
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*";
+        
+        document.querySelectorAll('.cve-row').forEach(row => {
+            const cvssText = row.querySelector('.cvss-text');
+            const targetScore = row.dataset.cvss;
+            let interval = null;
+
+            row.addEventListener('mouseenter', () => {
+                let iteration = 0;
+                clearInterval(interval);
+                
+                interval = setInterval(() => {
+                    cvssText.innerText = targetScore.split("")
+                        .map((letter, index) => {
+                            if(index < iteration) return targetScore[index];
+                            return chars[Math.floor(Math.random() * chars.length)];
+                        })
+                        .join("");
+                    
+                    if(iteration >= targetScore.length) {
+                        clearInterval(interval);
+                    }
+                    iteration += 1 / 4; 
+                }, 30);
+            });
+
+            row.addEventListener('mouseleave', () => {
+                clearInterval(interval);
+            });
+        });
+
+        const skullArt = `
+             .ed"""" """$$$$be.
+           -"           ^""**$$$e.
+         ."                   '$$$c
+        /                      "4$$b
+       d  3                      $$$$
+       $  * .$$$$$$
+      .$  ^c           $$$$$e$$$$$$$$.
+      d$L  4.         4$$$$$$$$$$$$$$b
+      $$$$b ^ceeeee.  4$$ECL.F*$$$$$$$
+      $$$$P d$$$$F $ $$$$$$$$$- $$$$$$
+      3$$$F "$$$$b   $"$$$$$$$  $$$$*"
+       $$P"  "$$b   .$ $$$$$...e$$
+        *c    ..    $$ 3$$$$$$$$$$eF
+          %ce""    $$$  $$$$$$$$$$*
+           *$e.    *** d$$$$$"L$$
+            $$$      4J$$$$$% $$$
+           $"'$=e....$*$$**$cz$$"
+           $  *=%4.$ L L$ P3$$$F
+           $   "%*ebJL s 3$$$$"
+           %..      4$$P"
+        `;
+
+        console.log(
+            `%c${skullArt}\n\n[!] SYSTEM BREACH ATTEMPT DETECTED...\n\n[?] Looking for vulnerabilities? Maybe you should check out my skills on GitHub!\n--> https://github.com/rickidevs`,
+            "color: #22c55e; font-family: monospace;"
+        );
     </script>
 </body>
 </html>
