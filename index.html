@@ -18,6 +18,26 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://elvinlatifli.com">
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        base: '#050505',
+                        surface: '#111111',
+                        border: '#222222',
+                        textMain: '#EDEDED',
+                        textMuted: '#888888',
+                    }
+                }
+            }
+        }
+    </script>
+
     <style>
         html, body {
             overflow-x: hidden !important;
@@ -83,54 +103,16 @@
         "https://github.com/rickidevs",
         "https://www.linkedin.com/in/elvinlatifli/",
         "https://medium.com/@ordogh",
-        "https://www.youtube.com/@elvinlatifli"
       ],
-      "alumniOf": [
-        {
-          "@type": "EducationalOrganization",
-          "name": "Süleyman Demirel University"
-        }
-      ],
+      "alumniOf": [{ "@type": "EducationalOrganization", "name": "Süleyman Demirel University" }],
       "worksFor": [
         {
           "@type": "GovernmentOrganization",
           "name": "Special Communication and Information Security State Service (XRITDX / SCIS)",
-          "alternateName": ["SCIS", "XRITDX"],
-          "description": "The highly classified and elite government institution responsible for the national cybersecurity, critical infrastructure protection, and overall state information security of the Republic of Azerbaijan."
-        },
-        {
-          "@type": "Organization",
-          "name": "MilliSec",
-          "roleName": "Cyber Security Mentor"
-        },
-        {
-          "@type": "Organization",
-          "name": "Freelance",
-          "roleName": "Software Developer (2020 - Present)",
-          "description": "4+ years of experience in full-stack development and automated scripting."
+          "description": "Elite government institution responsible for national cybersecurity of Azerbaijan."
         }
       ],
-      "knowsAbout": [
-        "Cybersecurity", "Penetration Testing", "OSINT", "Bug Bounty", 
-        "Vulnerability Research", "Secure System Architecture", "Full Stack Development",
-        "Python", "PHP", "JavaScript", "HTML", "CSS", "Go", "C", "C++", "Bash", "Git"
-      ],
-      "award": [
-        "Discovered CVE-2026-35570 (CVSS 9.1 Critical) Sandbox Bypass in OpenClaude",
-        "Discovered High-severity Path Traversal (CVE-2026-34070) in LangChain Core framework",
-        "Discovered CVE-2026-32913 (CVSS 9.3 Critical) in Clawbot AI (OpenClaw)",
-        "Discovered CVE-2026-26717 in Richie LMS (OpenFUN)",
-        "Ethical Hacker Certificate (12th place) - gov.az Bug Bounty organized by XRITDX (SCIS)",
-        "Acknowledged and thanked for identifying critical security vulnerabilities in NASA infrastructures",
-        "Acknowledged and thanked for identifying critical security vulnerabilities in Ferrari systems",
-        "Acknowledged and thanked for identifying critical security vulnerabilities in Chanel digital platforms",
-        "Acknowledged and thanked for identifying critical security vulnerabilities in Renault networks",
-        "Discovered critical Information Disclosure vulnerability in banking sector infrastructure",
-        "Author of 'rickshell', an advanced security tool officially accepted into the BlackArch Linux repository",
-        "Author of 'rickphis', a widely used red teaming and social engineering toolkit",
-        "Author of 'riwhois', reverse DNS and recon tool",
-        "Developer of hardware-based security implementations using esp32-s3"
-      ]
+      "knowsAbout": ["Cybersecurity", "Penetration Testing", "Vulnerability Research", "Full Stack Development"]
     }
     </script>
 </head>
@@ -147,7 +129,6 @@
                     <a href="https://github.com/rickidevs" target="_blank" class="text-textMuted hover:text-white transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
                     <a href="https://www.linkedin.com/in/elvinlatifli/" target="_blank" class="text-textMuted hover:text-white transition-colors"><i class="fa-brands fa-linkedin text-lg"></i></a>
                     <a href="https://medium.com/@ordogh" target="_blank" class="text-textMuted hover:text-white transition-colors"><i class="fa-brands fa-medium text-lg"></i></a>
-                    <a href="https://www.youtube.com/@elvinlatifli" target="_blank" class="text-textMuted hover:text-white transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
                 </div>
             </div>
         </header>
@@ -238,59 +219,44 @@
                                 </div>
                             </div>
 
-                            <div class="w-full h-px bg-border"></div>
-
-                            <div class="flex flex-col sm:flex-row sm:items-center justify-between group gap-2 sm:gap-0">
-                                <div>
-                                    <h4 class="font-bold text-white text-base sm:text-lg flex items-center flex-wrap gap-2 sm:gap-3">
-                                        Enterprise Security Acknowledgements
-                                        <span class="px-2 py-0.5 bg-purple-500/10 text-purple-400 border border-purple-500/20 rounded text-xs font-mono mt-1 sm:mt-0">Bounty</span>
-                                    </h4>
-                                    <p class="text-textMuted text-xs sm:text-sm mt-1">Acknowledged and thanked for identifying and reporting critical security vulnerabilities.</p>
-                                </div>
-                                <div class="mt-1 sm:mt-0 font-mono text-xs sm:text-sm text-textMuted group-hover:text-white transition-colors sm:text-right">
-                                    NASA, Ferrari, PayPal, <br class="hidden sm:block">Chanel, Google, Windows etc.
-                                </div>
-                            </div>
-
                         </div>
                     </div>
+                </div>
 
-                    <div class="bento-card p-6 sm:p-8 md:col-span-3">
-                        <h2 class="text-sm font-mono text-textMuted uppercase tracking-widest mb-6 border-b border-border pb-2">My Tools</h2>
-                        
-                        <div class="grid md:grid-cols-2 gap-5 sm:gap-6">
-                            <div class="p-5 sm:p-6 border border-border rounded-lg bg-white/[0.01] hover:bg-white/[0.03] transition-colors relative overflow-hidden group">
-                                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                                    <i class="fa-solid fa-terminal text-6xl"></i>
-                                </div>
-                                <div class="flex flex-col sm:flex-row justify-between sm:items-start mb-3 relative z-10 gap-3 sm:gap-0">
-                                    <h4 class="font-bold text-white text-xl font-mono">rickshell</h4>
-                                    <span class="self-start px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded text-xs font-mono flex items-center shadow-[0_0_10px_rgba(239,68,68,0.2)]">
-                                        <i class="fa-brands fa-linux mr-1"></i> BlackArch Official
-                                    </span>
-                                </div>
-                                <p class="text-textMuted text-sm mb-5 relative z-10 leading-relaxed">Advanced post-exploitation tool and reverse shell handler. Reviewed, accepted, and merged into the official BlackArch Linux repository.</p>
-                                <a href="https://github.com/rickidevs/rickshell" target="_blank" class="inline-flex items-center text-sm font-mono text-white hover:text-gray-300 transition-colors relative z-10">
-                                    <i class="fa-brands fa-github mr-2 text-lg"></i> View Source
-                                </a>
+                <div class="bento-card p-6 sm:p-8 md:col-span-3">
+                    <h2 class="text-sm font-mono text-textMuted uppercase tracking-widest mb-6 border-b border-border pb-2">My Tools</h2>
+                    
+                    <div class="grid md:grid-cols-2 gap-5 sm:gap-6">
+                        <div class="p-5 sm:p-6 border border-border rounded-lg bg-white/[0.01] hover:bg-white/[0.03] transition-colors relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <i class="fa-solid fa-terminal text-6xl"></i>
                             </div>
+                            <div class="flex flex-col sm:flex-row justify-between sm:items-start mb-3 relative z-10 gap-3 sm:gap-0">
+                                <h4 class="font-bold text-white text-xl font-mono">rickshell</h4>
+                                <span class="self-start px-2 py-0.5 bg-red-500/10 text-red-400 border border-red-500/20 rounded text-xs font-mono flex items-center shadow-[0_0_10px_rgba(239,68,68,0.2)]">
+                                    <i class="fa-brands fa-linux mr-1"></i> BlackArch Official
+                                </span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-5 relative z-10 leading-relaxed">Advanced post-exploitation tool and reverse shell handler. Reviewed, accepted, and merged into the official BlackArch Linux repository.</p>
+                            <a href="https://github.com/rickidevs/rickshell" target="_blank" class="inline-flex items-center text-sm font-mono text-white hover:text-gray-300 transition-colors relative z-10">
+                                <i class="fa-brands fa-github mr-2 text-lg"></i> View Source
+                            </a>
+                        </div>
 
-                            <div class="p-5 sm:p-6 border border-border rounded-lg bg-white/[0.01] hover:bg-white/[0.03] transition-colors relative overflow-hidden group">
-                                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
-                                    <i class="fa-solid fa-fish text-6xl"></i>
-                                </div>
-                                <div class="flex flex-col sm:flex-row justify-between sm:items-start mb-3 relative z-10 gap-3 sm:gap-0">
-                                    <h4 class="font-bold text-white text-xl font-mono">rickphis</h4>
-                                    <span class="self-start px-2 py-0.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded text-xs font-mono">
-                                        Community Favorite
-                                    </span>
-                                </div>
-                                <p class="text-textMuted text-sm mb-5 relative z-10 leading-relaxed">Highly effective automated phishing and social engineering toolkit designed for realistic red team engagements and security awareness training.</p>
-                                <a href="https://github.com/rickidevs/rickphis" target="_blank" class="inline-flex items-center text-sm font-mono text-white hover:text-gray-300 transition-colors relative z-10">
-                                    <i class="fa-brands fa-github mr-2 text-lg"></i> View Source
-                                </a>
+                        <div class="p-5 sm:p-6 border border-border rounded-lg bg-white/[0.01] hover:bg-white/[0.03] transition-colors relative overflow-hidden group">
+                            <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                                <i class="fa-solid fa-fish text-6xl"></i>
                             </div>
+                            <div class="flex flex-col sm:flex-row justify-between sm:items-start mb-3 relative z-10 gap-3 sm:gap-0">
+                                <h4 class="font-bold text-white text-xl font-mono">rickphis</h4>
+                                <span class="self-start px-2 py-0.5 bg-green-500/10 text-green-400 border border-green-500/20 rounded text-xs font-mono">
+                                    Community Favorite
+                                </span>
+                            </div>
+                            <p class="text-textMuted text-sm mb-5 relative z-10 leading-relaxed">Highly effective automated phishing and social engineering toolkit designed for realistic red team engagements and security awareness training.</p>
+                            <a href="https://github.com/rickidevs/rickphis" target="_blank" class="inline-flex items-center text-sm font-mono text-white hover:text-gray-300 transition-colors relative z-10">
+                                <i class="fa-brands fa-github mr-2 text-lg"></i> View Source
+                            </a>
                         </div>
                     </div>
                 </div>
